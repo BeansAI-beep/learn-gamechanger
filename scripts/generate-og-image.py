@@ -1,34 +1,44 @@
 from PIL import Image, ImageDraw, ImageFont
 from pathlib import Path
+import math
 
 W, H = 1200, 630
-out = Path('/home/beans/.openclaw/workspace/learn-gamechanger/public/og-image.png')
+root = Path('/home/beans/.openclaw/workspace/learn-gamechanger')
+out = root / 'public/og-image.png'
+face_path = root / 'public/ashley/ashley-cutout-2.png'
 
 img = Image.new('RGB', (W, H), '#ffde59')
 d = ImageDraw.Draw(img)
 
-# Background blocks / infomercial vibe
 colors = {
     'yellow': '#ffde59',
     'red': '#ff4d4d',
-    'blue': '#3bd3ff',
+    'blue': '#30d5ff',
     'pink': '#ff73d2',
-    'lime': '#a6ff4d',
+    'lime': '#a8ff45',
+    'orange': '#ff9f1c',
     'black': '#000000',
     'white': '#ffffff',
 }
 
-d.rectangle([0, 0, W, H], fill=colors['yellow'])
-d.rectangle([0, 0, W, 110], fill=colors['red'])
-d.rectangle([0, H-120, W, H], fill=colors['blue'])
-d.polygon([(760, 0), (1200, 0), (1200, 270)], fill=colors['pink'])
-d.polygon([(0, 420), (320, 630), (0, 630)], fill=colors['lime'])
+# Background
+for y in range(H):
+    blend = y / H
+    r1, g1, b1 = (255, 233, 92)
+    r2, g2, b2 = (255, 146, 28)
+    r = int(r1 * (1 - blend) + r2 * blend)
+    g = int(g1 * (1 - blend) + g2 * blend)
+    b = int(b1 * (1 - blend) + b2 * blend)
+    d.line([(0, y), (W, y)], fill=(r, g, b))
 
-# Borders
-for rect in ([20, 20, W-20, H-20], [36, 36, W-36, H-36]):
+d.rectangle([0, 0, W, 96], fill=colors['red'])
+d.rectangle([0, H - 105, W, H], fill=colors['blue'])
+d.polygon([(770, 0), (1200, 0), (1200, 270)], fill=colors['pink'])
+d.polygon([(0, 445), (270, 630), (0, 630)], fill=colors['lime'])
+
+for rect in ([18, 18, W - 18, H - 18], [34, 34, W - 34, H - 34]):
     d.rectangle(rect, outline=colors['black'], width=6)
 
-# Fonts
 font_paths = [
     '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf',
     '/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf',
@@ -41,56 +51,77 @@ else:
     font_path = None
 
 if font_path:
-    title = ImageFont.truetype(font_path, 118)
-    subtitle = ImageFont.truetype(font_path, 44)
-    small = ImageFont.truetype(font_path, 28)
-    badge = ImageFont.truetype(font_path, 34)
+    title = ImageFont.truetype(font_path, 106)
+    subtitle = ImageFont.truetype(font_path, 34)
+    small = ImageFont.truetype(font_path, 24)
+    badge = ImageFont.truetype(font_path, 26)
+    burst_font = ImageFont.truetype(font_path, 26)
 else:
-    title = subtitle = small = badge = ImageFont.load_default()
+    title = subtitle = small = badge = burst_font = ImageFont.load_default()
 
-# Top badge
-badge_box = [60, 52, 470, 120]
-d.rounded_rectangle(badge_box, radius=14, fill=colors['white'], outline=colors['black'], width=5)
-d.text((82, 69), 'AS SEEN ON TEXT MESSAGE', font=badge, fill=colors['black'])
+# top badge
+badge_box = [54, 44, 420, 96]
+d.rounded_rectangle(badge_box, radius=12, fill=colors['white'], outline=colors['black'], width=4)
+d.text((72, 58), 'AS SEEN ON GROUP TEXT', font=badge, fill=colors['black'])
 
-# Main title with shadow
-main_x, main_y = 70, 165
-for dx, dy in [(8, 8)]:
-    d.text((main_x + dx, main_y + dy), 'GCGC', font=title, fill=colors['black'])
+# main title
+main_x, main_y = 70, 140
+d.text((main_x + 7, main_y + 7), 'GCGC', font=title, fill=colors['black'])
 d.text((main_x, main_y), 'GCGC', font=title, fill=colors['white'])
 
-# Subtitle bars
-sub1 = 'GRUMP CITY'
-sub2 = 'GAME CHANGER'
-box1 = [70, 305, 520, 365]
-box2 = [70, 380, 710, 440]
-d.rectangle(box1, fill=colors['blue'], outline=colors['black'], width=5)
-d.rectangle(box2, fill=colors['red'], outline=colors['black'], width=5)
-d.text((90, 315), sub1, font=subtitle, fill=colors['black'])
-d.text((90, 390), sub2, font=subtitle, fill=colors['white'])
+# subtitle ribbons
+box1 = [70, 275, 455, 327]
+box2 = [70, 343, 620, 395]
+d.rectangle(box1, fill=colors['blue'], outline=colors['black'], width=4)
+d.rectangle(box2, fill=colors['red'], outline=colors['black'], width=4)
+d.text((88, 285), 'GRUMP CITY', font=subtitle, fill=colors['black'])
+d.text((88, 353), 'GAME CHANGER', font=subtitle, fill=colors['white'])
 
-# Description box
-info = [70, 470, 760, 565]
-d.rectangle(info, fill=colors['white'], outline=colors['black'], width=5)
-d.text((95, 490), "Ashley's GameChanger mini course waitlist", font=small, fill=colors['black'])
-d.text((95, 525), 'for sports parents & scorekeepers', font=small, fill=colors['black'])
+# info box
+info = [70, 425, 645, 540]
+d.rectangle(info, fill=colors['white'], outline=colors['black'], width=4)
+d.text((92, 447), "Ashley's GameChanger", font=small, fill=colors['black'])
+d.text((92, 480), 'mini course waitlist', font=small, fill=colors['black'])
+d.text((92, 513), 'for sports parents & scorekeepers', font=small, fill=colors['black'])
 
-# Price-style burst
-burst_center = (1005, 180)
+# Ashley face / cutout on right
+if face_path.exists():
+    face = Image.open(face_path).convert('RGBA')
+    bbox = face.getchannel('A').getbbox()
+    if bbox:
+        face = face.crop(bbox)
+    target_h = 395
+    scale = target_h / face.height
+    face = face.resize((int(face.width * scale), target_h))
+    fx = 760
+    fy = 165
+
+    shadow = Image.new('RGBA', (face.width + 20, face.height + 20), (0, 0, 0, 0))
+    sd = ImageDraw.Draw(shadow)
+    sd.rounded_rectangle([12, 12, face.width + 8, face.height + 8], radius=30, fill=(0, 0, 0, 90))
+    img.paste(shadow.convert('RGB'), (fx + 10, fy + 14), shadow)
+    img.paste(face, (fx, fy), face)
+
+    # sticker by face
+    sticker = [840, 118, 1135, 164]
+    d.rounded_rectangle(sticker, radius=16, fill=colors['lime'], outline=colors['black'], width=4)
+    d.text((865, 130), 'ASHLEY KNOWS THE APP', font=badge, fill=colors['black'])
+
+# burst
+burst_center = (1015, 485)
 points = []
-import math
-for i in range(24):
-    angle = math.radians(i * 15)
-    r = 118 if i % 2 == 0 else 78
+for i in range(22):
+    angle = math.radians(i * (360 / 22))
+    r = 105 if i % 2 == 0 else 72
     points.append((burst_center[0] + r * math.cos(angle), burst_center[1] + r * math.sin(angle)))
-d.polygon(points, fill=colors['lime'], outline=colors['black'])
-d.text((930, 145), 'WAITLIST', font=subtitle, fill=colors['black'])
-d.text((965, 190), 'OPEN', font=subtitle, fill=colors['black'])
+d.polygon(points, fill=colors['pink'], outline=colors['black'])
+d.text((950, 458), 'WAITLIST', font=burst_font, fill=colors['black'])
+d.text((978, 492), 'OPEN', font=burst_font, fill=colors['black'])
 
-# Bottom-right CTA sticker
-cta = [810, 430, 1120, 540]
-d.rounded_rectangle(cta, radius=18, fill=colors['pink'], outline=colors['black'], width=6)
-d.text((855, 455), 'SAVE MY SPOT', font=subtitle, fill=colors['black'])
+# extra ridiculous banner
+cta = [725, 48, 1128, 100]
+d.rounded_rectangle(cta, radius=14, fill=colors['yellow'], outline=colors['black'], width=4)
+d.text((748, 62), 'STOP THE GAME-DAY PANIC', font=badge, fill=colors['black'])
 
 img.save(out)
 print(out)
