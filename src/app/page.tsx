@@ -251,18 +251,34 @@ export default function Home() {
               <div className="inline-block border-4 border-black bg-yellow-300 px-4 py-2 text-sm font-black uppercase tracking-[0.2em] text-black">
                 Meet Ashley
               </div>
-              <h2 className="mt-6 text-4xl font-black uppercase leading-tight text-black">
-                Your unofficial GameChanger translator.
-              </h2>
-              <p className="mt-6 text-lg font-bold leading-8 text-slate-800">
-                Ashley uses GameChanger a lot and is the kind of person who can
-                take something that feels confusing, stressful, and chaotic and
-                explain it in a way that actually makes sense.
-              </p>
-              <p className="mt-4 text-lg font-bold leading-8 text-slate-800">
-                This isn&apos;t about pretending the app is obvious. It&apos;s about making
-                it feel manageable before the next game starts.
-              </p>
+              <div className="mt-6 grid gap-6 md:grid-cols-[0.9fr_1.1fr] md:items-end">
+                <div className="relative mx-auto w-full max-w-[240px]">
+                  <div className="absolute -left-3 top-3 z-20 rotate-[-8deg] border-4 border-black bg-lime-400 px-3 py-2 text-xs font-black uppercase tracking-[0.15em] text-black shadow-[4px_4px_0_#000]">
+                    Coach energy
+                  </div>
+                  <Image
+                    src="/ashley/ashley-cutout-2.png"
+                    alt="Ashley standing and smiling"
+                    width={1437}
+                    height={2513}
+                    className="relative z-10 h-auto w-full object-contain drop-shadow-[0_16px_16px_rgba(0,0,0,0.35)]"
+                  />
+                </div>
+                <div>
+                  <h2 className="text-4xl font-black uppercase leading-tight text-black">
+                    Your unofficial GameChanger translator.
+                  </h2>
+                  <p className="mt-6 text-lg font-bold leading-8 text-slate-800">
+                    Ashley uses GameChanger a lot and is the kind of person who can
+                    take something that feels confusing, stressful, and chaotic and
+                    explain it in a way that actually makes sense.
+                  </p>
+                  <p className="mt-4 text-lg font-bold leading-8 text-slate-800">
+                    This isn&apos;t about pretending the app is obvious. It&apos;s about making
+                    it feel manageable before the next game starts.
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="border-4 border-black bg-[#fff7cf] p-8 shadow-[8px_8px_0_#000]">
