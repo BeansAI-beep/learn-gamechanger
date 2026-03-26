@@ -165,7 +165,7 @@ export default function Home() {
               </div>
               <div className="relative z-10 mx-auto max-w-sm">
                 <Image
-                  src="/ashley/IMG_3033.jpg"
+                  src="/ashley/ashley-hero.jpg"
                   alt="Ashley"
                   width={1215}
                   height={1620}
