@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "GCGC | Grump City Game Changer",
   description:
-    "Satirical branding, real help. Join Ashley's waitlist for a beginner-friendly mini course to help sports parents and scorekeepers learn GameChanger with less stress.",
+    "Join Ashley's waitlist for a beginner-friendly mini course to help sports parents and scorekeepers learn GameChanger with less stress.",
   keywords: [
     "GCGC",
     "Grump City Game Changer",
@@ -29,14 +29,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "GCGC | Grump City Game Changer",
     description:
-      "Satirical branding, real help for sports parents and scorekeepers.",
+      "Beginner-friendly help for sports parents and scorekeepers.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "GCGC | Grump City Game Changer",
     description:
-      "Satirical branding, real help for sports parents and scorekeepers.",
+      "Beginner-friendly help for sports parents and scorekeepers.",
   },
   icons: {
     icon: "/favicon.ico",

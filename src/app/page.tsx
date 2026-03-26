@@ -103,9 +103,9 @@ export default function Home() {
             </p>
 
             <p className="mt-6 max-w-2xl text-xl font-bold leading-8 text-slate-900 md:text-2xl">
-              A satirical brand for a very real GameChanger mini course. Join
-              Ashley&apos;s waitlist and learn GameChanger without the stress,
-              confusion, or fake confidence nods.
+              Join Ashley&apos;s waitlist for a beginner-friendly mini course and
+              learn GameChanger without the stress, confusion, or fake
+              confidence nods.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
