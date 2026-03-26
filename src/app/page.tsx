@@ -25,7 +25,18 @@ const waitlistReasons = [
   "Get updates on bonus resources and quick-start help",
 ];
 
+const fakeBonuses = [
+  "BONUS: fewer panic taps per inning*",
+  "BONUS: less fake nodding when coaches talk about the app*",
+  "BONUS: increased odds of looking like you know what you're doing*",
+];
+
 const faqs = [
+  {
+    question: "What is GCGC?",
+    answer:
+      "GCGC stands for Grump City Game Changer — a slightly ridiculous, very intentional brand for beginner-friendly GameChanger help.",
+  },
   {
     question: "What is the first product?",
     answer:
@@ -61,17 +72,18 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-10 px-6 pb-20 pt-4 md:grid-cols-[1.1fr_0.9fr] md:px-10 md:pb-24 md:pt-6">
           <div>
             <div className="inline-block -rotate-2 border-4 border-black bg-cyan-300 px-4 py-2 text-sm font-black uppercase tracking-[0.2em] text-black shadow-[6px_6px_0_#000]">
-              Learn GameChanger • simple training for sports parents and scorekeepers
+              GCGC • Grump City Game Changer • because somebody had to teach this properly
             </div>
 
             <h1 className="mt-6 text-5xl font-black uppercase leading-none tracking-tight text-black md:text-7xl">
-              Stop the
-              <span className="block text-red-600">Game-Day Panic.</span>
+              Grump City
+              <span className="block text-red-600">Game Changer</span>
             </h1>
 
             <p className="mt-6 max-w-2xl text-xl font-bold leading-8 text-slate-900 md:text-2xl">
-              Join the waitlist for Ashley&apos;s upcoming mini course and learn
-              GameChanger without the stress, confusion, or fake confidence nods.
+              Satirical branding. Real help. Join the waitlist for Ashley&apos;s
+              upcoming mini course and learn GameChanger without the stress,
+              confusion, or fake confidence nods.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -100,8 +112,8 @@ export default function Home() {
             </div>
 
             <p className="mt-5 max-w-2xl text-sm font-semibold uppercase tracking-wide text-slate-700">
-              Independent training. Not affiliated with or endorsed by
-              GameChanger.
+              Grump City branding is a joke. The help is real. Independent
+              training. Not affiliated with or endorsed by GameChanger.
             </p>
           </div>
 
@@ -138,9 +150,10 @@ export default function Home() {
               A mini course for parents who just want to get this right.
             </h2>
             <p className="mt-6 max-w-3xl text-xl font-bold leading-8 text-slate-800">
-              The first product is planned as a simple, practical mini course.
-              But first, we&apos;re building the waitlist so we can validate demand
-              and shape the lessons around what people actually need help with.
+              GCGC is the fun wrapper. The actual offer is practical: beginner-
+              friendly GameChanger training from Ashley. The first product is
+              planned as a simple mini course. But first, we&apos;re building the
+              waitlist to validate demand and learn what people need most.
             </p>
           </div>
 
@@ -213,8 +226,8 @@ export default function Home() {
 
       <section className="border-b-4 border-black bg-[#fffdf4]">
         <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
-          <div className="grid gap-6 md:grid-cols-2">
-            <div className="border-4 border-black bg-lime-400 p-8 shadow-[8px_8px_0_#000]">
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            <div className="border-4 border-black bg-lime-400 p-8 shadow-[8px_8px_0_#000] xl:col-span-1">
               <h2 className="text-4xl font-black uppercase leading-tight text-black">
                 But wait... there&apos;s more.
               </h2>
@@ -229,7 +242,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="border-4 border-black bg-white p-8 shadow-[8px_8px_0_#000]">
+            <div className="border-4 border-black bg-white p-8 shadow-[8px_8px_0_#000] xl:col-span-1">
               <h3 className="text-2xl font-black uppercase text-red-600">
                 Why this is different
               </h3>
@@ -241,6 +254,51 @@ export default function Home() {
                 ))}
               </div>
             </div>
+
+            <div className="border-4 border-black bg-pink-400 p-8 shadow-[8px_8px_0_#000] xl:col-span-1">
+              <h3 className="text-2xl font-black uppercase text-black">
+                Special fake bonuses
+              </h3>
+              <div className="mt-6 grid gap-4">
+                {fakeBonuses.map((item) => (
+                  <div key={item} className="border-4 border-black bg-white p-4 text-lg font-black text-black">
+                    {item}
+                  </div>
+                ))}
+              </div>
+              <p className="mt-4 text-sm font-black uppercase text-black">
+                *Fake marketing claims. Real educational intent.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b-4 border-black bg-cyan-300">
+        <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="border-4 border-black bg-white p-8 shadow-[8px_8px_0_#000]">
+              <h2 className="text-4xl font-black uppercase text-red-600">
+                Before GCGC
+              </h2>
+              <ul className="mt-6 space-y-4 text-lg font-bold leading-8 text-slate-900">
+                <li>• Random tapping</li>
+                <li>• Quiet panic</li>
+                <li>• Confusing menus</li>
+                <li>• Hoping nobody notices</li>
+              </ul>
+            </div>
+            <div className="border-4 border-black bg-yellow-300 p-8 shadow-[8px_8px_0_#000]">
+              <h2 className="text-4xl font-black uppercase text-black">
+                After GCGC
+              </h2>
+              <ul className="mt-6 space-y-4 text-lg font-bold leading-8 text-black">
+                <li>• Better workflow</li>
+                <li>• Less panic</li>
+                <li>• Clearer understanding</li>
+                <li>• Mildly impressive competence</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -250,7 +308,7 @@ export default function Home() {
           <div className="inline-block rotate-1 border-4 border-black bg-yellow-300 px-4 py-2 text-sm font-black uppercase tracking-[0.2em] text-black shadow-[5px_5px_0_#000]">
             Frequently asked stuff
           </div>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
+          <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {faqs.map((faq) => (
               <div
                 key={faq.question}
@@ -307,8 +365,8 @@ export default function Home() {
           </form>
 
           <p className="mt-5 text-sm font-semibold uppercase tracking-wide text-slate-400">
-            Placeholder form for now — next we can connect this to Tally,
-            Formspree, Google Forms, or a custom form backend.
+            Placeholder form for now — send the Tally link and I&apos;ll wire this up
+            next.
           </p>
         </div>
       </section>
