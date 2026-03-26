@@ -31,6 +31,24 @@ const fakeBonuses = [
   "BONUS: increased odds of looking like you know what you're doing*",
 ];
 
+const testimonials = [
+  {
+    quote:
+      "I went from random tapping to mild competence in what felt like record time.",
+    name: "Probably a Team Mom Somewhere",
+  },
+  {
+    quote:
+      "Before this, I was spiritually unprepared for scorekeeping.",
+    name: "Definitely Not a Nervous Parent",
+  },
+  {
+    quote:
+      "Five stars. Zero stars for the panic I used to feel before every game.",
+    name: "Person Who Just Wanted Someone To Explain It Normally",
+  },
+];
+
 const faqs = [
   {
     question: "What is GCGC?",
@@ -111,6 +129,18 @@ export default function Home() {
             <div className="mt-6 inline-block -rotate-1 border-4 border-black bg-pink-400 px-5 py-3 text-base font-black uppercase text-black shadow-[6px_6px_0_#000]">
               BUT WAIT — we&apos;re starting with a waitlist first to see if this idea
               has legs.
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-4">
+              <div className="rotate-[-4deg] border-4 border-black bg-yellow-300 px-4 py-3 text-sm font-black uppercase text-black shadow-[5px_5px_0_#000]">
+                No tech degree required
+              </div>
+              <div className="rotate-[3deg] border-4 border-black bg-lime-400 px-4 py-3 text-sm font-black uppercase text-black shadow-[5px_5px_0_#000]">
+                Mildly impressive competence
+              </div>
+              <div className="rotate-[-2deg] border-4 border-black bg-white px-4 py-3 text-sm font-black uppercase text-black shadow-[5px_5px_0_#000]">
+                Results may vary by panic level
+              </div>
             </div>
 
             <p className="mt-5 max-w-2xl text-sm font-semibold uppercase tracking-wide text-slate-700">
@@ -301,6 +331,26 @@ export default function Home() {
                 <li>• Mildly impressive competence</li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b-4 border-black bg-[linear-gradient(135deg,_#ffef5a_0%,_#ff8fab_100%)]">
+        <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
+          <div className="mb-8 inline-block -rotate-1 border-4 border-black bg-white px-5 py-2 text-sm font-black uppercase tracking-[0.2em] text-black shadow-[5px_5px_0_#000]">
+            Testimonials that are mostly for the bit
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {testimonials.map((item) => (
+              <div key={item.name} className="border-4 border-black bg-white p-7 shadow-[8px_8px_0_#000]">
+                <p className="text-xl font-black leading-8 text-slate-900">
+                  “{item.quote}”
+                </p>
+                <p className="mt-5 text-sm font-black uppercase tracking-wide text-red-600">
+                  — {item.name}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
