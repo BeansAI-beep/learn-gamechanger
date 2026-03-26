@@ -125,23 +125,23 @@ export default function Home() {
 
           <div className="flex items-center justify-center">
             <div className="relative w-full max-w-lg">
-              <div className="absolute left-0 top-0 z-20 rotate-[-8deg] border-4 border-black bg-yellow-300 px-3 py-2 text-xs font-black uppercase tracking-[0.12em] text-black shadow-[5px_5px_0_#000] md:-left-2 md:-top-6 md:px-4 md:text-sm md:tracking-[0.15em]">
+              <div className="absolute left-1 top-2 z-20 rotate-[-8deg] border-4 border-black bg-yellow-300 px-3 py-2 text-xs font-black uppercase tracking-[0.12em] text-black shadow-[5px_5px_0_#000] md:-left-2 md:-top-6 md:px-4 md:text-sm md:tracking-[0.15em]">
                 Website Guy
               </div>
-              <div className="absolute right-0 top-8 z-20 rotate-[8deg] border-4 border-black bg-pink-400 px-3 py-2 text-xs font-black uppercase tracking-[0.12em] text-black shadow-[5px_5px_0_#000] md:-right-3 md:top-10 md:px-4 md:text-sm md:tracking-[0.15em]">
+              <div className="absolute right-1 top-10 z-20 rotate-[8deg] border-4 border-black bg-pink-400 px-3 py-2 text-xs font-black uppercase tracking-[0.12em] text-black shadow-[5px_5px_0_#000] md:-right-3 md:top-10 md:px-4 md:text-sm md:tracking-[0.15em]">
                 Ashley
               </div>
-              <div className="relative z-10 mx-auto max-w-[280px] md:max-w-sm">
+              <div className="relative z-10 mx-auto max-w-[340px] md:max-w-md">
                 <Image
                   src="/ashley/ashley-cutout.png"
                   alt="Ashley and website guy"
-                  width={2124}
+                  width={3024}
                   height={2529}
                   className="h-auto w-full object-contain drop-shadow-[0_18px_18px_rgba(0,0,0,0.45)]"
                   priority
                 />
               </div>
-              <div className="relative mt-2 border-4 border-black bg-white p-5 shadow-[10px_10px_0_#000] md:-mt-8 md:p-6">
+              <div className="relative mt-4 border-4 border-black bg-white p-5 shadow-[10px_10px_0_#000] md:-mt-4 md:p-6">
                 <div className="border-4 border-black bg-red-600 px-4 py-2 text-center text-sm font-black uppercase tracking-[0.16em] text-white md:tracking-[0.2em]">
                   Tired of this routine?
                 </div>
