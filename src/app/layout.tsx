@@ -31,12 +31,14 @@ export const metadata: Metadata = {
     description:
       "Beginner-friendly help for sports parents and scorekeepers.",
     type: "website",
+    images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "GCGC | Grump City Game Changer",
     description:
       "Beginner-friendly help for sports parents and scorekeepers.",
+    images: ["/og-image.png"],
   },
   icons: {
     icon: "/favicon.ico",
