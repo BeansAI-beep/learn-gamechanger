@@ -36,6 +36,9 @@ export const metadata: Metadata = {
     description:
       "Simple training for sports parents and scorekeepers.",
   },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
