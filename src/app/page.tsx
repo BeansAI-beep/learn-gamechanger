@@ -165,10 +165,10 @@ export default function Home() {
               </div>
               <div className="relative z-10 mx-auto max-w-sm">
                 <Image
-                  src="/ashley/ashley-cutout.png"
+                  src="/ashley/ashley-cutout-clean.png"
                   alt="Ashley"
-                  width={3024}
-                  height={2529}
+                  width={1215}
+                  height={1201}
                   className="h-auto w-full object-contain drop-shadow-[0_18px_18px_rgba(0,0,0,0.45)]"
                   priority
                 />
