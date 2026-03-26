@@ -158,18 +158,18 @@ export default function Home() {
           <div className="flex items-center justify-center">
             <div className="relative w-full max-w-lg">
               <div className="absolute -left-2 -top-6 z-20 rotate-[-8deg] border-4 border-black bg-yellow-300 px-4 py-2 text-sm font-black uppercase tracking-[0.15em] text-black shadow-[5px_5px_0_#000]">
-                Real Ashley*
+                Website Guy
               </div>
               <div className="absolute -right-3 top-10 z-20 rotate-[8deg] border-4 border-black bg-pink-400 px-4 py-2 text-sm font-black uppercase tracking-[0.15em] text-black shadow-[5px_5px_0_#000]">
                 *actual expert
               </div>
               <div className="relative z-10 mx-auto max-w-sm">
                 <Image
-                  src="/ashley/ashley-hero.jpg"
-                  alt="Ashley"
-                  width={1215}
-                  height={1620}
-                  className="h-auto w-full rounded-[2rem] border-4 border-black object-cover shadow-[0_18px_18px_rgba(0,0,0,0.45)]"
+                  src="/ashley/ashley-cutout.png"
+                  alt="Ashley and website guy"
+                  width={2124}
+                  height={2529}
+                  className="h-auto w-full object-contain drop-shadow-[0_18px_18px_rgba(0,0,0,0.45)]"
                   priority
                 />
               </div>
