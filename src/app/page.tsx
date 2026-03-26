@@ -125,11 +125,11 @@ export default function Home() {
 
           <div className="flex items-center justify-center">
             <div className="w-full max-w-lg">
-              <div className="relative mx-auto max-w-[340px] md:max-w-md">
-                <div className="absolute left-1 top-2 z-20 rotate-[-8deg] border-4 border-black bg-yellow-300 px-3 py-2 text-xs font-black uppercase tracking-[0.12em] text-black shadow-[5px_5px_0_#000] md:-left-2 md:-top-6 md:px-4 md:text-sm md:tracking-[0.15em]">
+              <div className="relative mx-auto mt-10 max-w-[340px] md:mt-4 md:max-w-md">
+                <div className="absolute left-1 -top-8 z-20 rotate-[-8deg] border-4 border-black bg-yellow-300 px-3 py-2 text-xs font-black uppercase tracking-[0.12em] text-black shadow-[5px_5px_0_#000] md:-left-2 md:-top-6 md:px-4 md:text-sm md:tracking-[0.15em]">
                   Website Guy
                 </div>
-                <div className="absolute right-1 top-10 z-20 rotate-[8deg] border-4 border-black bg-pink-400 px-3 py-2 text-xs font-black uppercase tracking-[0.12em] text-black shadow-[5px_5px_0_#000] md:-right-3 md:top-10 md:px-4 md:text-sm md:tracking-[0.15em]">
+                <div className="absolute right-1 -top-2 z-20 rotate-[8deg] border-4 border-black bg-pink-400 px-3 py-2 text-xs font-black uppercase tracking-[0.12em] text-black shadow-[5px_5px_0_#000] md:-right-3 md:top-10 md:px-4 md:text-sm md:tracking-[0.15em]">
                   Ashley
                 </div>
                 <Image
