@@ -88,7 +88,9 @@ export default function Home() {
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
-                href="#interest"
+                href="https://tally.so/r/0QLDx0"
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-full border-4 border-black bg-lime-400 px-8 py-4 text-lg font-black uppercase tracking-wide text-black shadow-[6px_6px_0_#000] transition hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0_#000]"
               >
                 Join the waitlist
@@ -331,43 +333,42 @@ export default function Home() {
             Get on Ashley&apos;s waitlist.
           </h2>
           <p className="mx-auto mt-6 max-w-3xl text-xl font-bold leading-8 text-slate-300">
-            Join the waitlist for beginner-friendly GameChanger training and help
-            us figure out if this should become a full mini course.
+            Join the waitlist for beginner-friendly GameChanger training, help us
+            validate the idea, and help shape what goes into the mini course.
           </p>
 
-          <form className="mx-auto mt-10 grid max-w-3xl gap-4 text-left md:grid-cols-2">
-            <input
-              type="text"
-              placeholder="Your name"
-              className="rounded-2xl border-4 border-white bg-white px-4 py-3 text-slate-950 placeholder:text-slate-500 focus:border-yellow-300 focus:outline-none"
-            />
-            <input
-              type="email"
-              placeholder="Email address"
-              className="rounded-2xl border-4 border-white bg-white px-4 py-3 text-slate-950 placeholder:text-slate-500 focus:border-yellow-300 focus:outline-none"
-            />
-            <input
-              type="text"
-              placeholder="Role (parent, coach, team admin, scorekeeper)"
-              className="rounded-2xl border-4 border-white bg-white px-4 py-3 text-slate-950 placeholder:text-slate-500 focus:border-yellow-300 focus:outline-none md:col-span-2"
-            />
-            <textarea
-              placeholder="What is your biggest GameChanger frustration?"
-              rows={4}
-              className="rounded-2xl border-4 border-white bg-white px-4 py-3 text-slate-950 placeholder:text-slate-500 focus:border-yellow-300 focus:outline-none md:col-span-2"
-            />
-            <button
-              type="submit"
-              className="rounded-full border-4 border-white bg-lime-400 px-6 py-4 text-lg font-black uppercase tracking-wide text-black shadow-[6px_6px_0_#ef4444] transition hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0_#ef4444] md:col-span-2"
+          <div className="mx-auto mt-10 max-w-3xl border-4 border-white bg-white p-8 text-slate-950 shadow-[10px_10px_0_#22c55e]">
+            <div className="border-4 border-black bg-yellow-300 px-4 py-3 text-center text-lg font-black uppercase text-black">
+              Ready to claim your spot in Grump City?
+            </div>
+            <div className="mt-6 grid gap-4 text-left md:grid-cols-2">
+              <div className="border-4 border-black bg-[#fff7cf] p-4 text-base font-black uppercase text-black">
+                ✓ Join the waitlist
+              </div>
+              <div className="border-4 border-black bg-[#fff7cf] p-4 text-base font-black uppercase text-black">
+                ✓ Share your biggest frustration
+              </div>
+              <div className="border-4 border-black bg-[#fff7cf] p-4 text-base font-black uppercase text-black">
+                ✓ Help shape the mini course
+              </div>
+              <div className="border-4 border-black bg-[#fff7cf] p-4 text-base font-black uppercase text-black">
+                ✓ Be first to hear when it launches
+              </div>
+            </div>
+
+            <a
+              href="https://tally.so/r/0QLDx0"
+              target="_blank"
+              rel="noreferrer"
+              className="mx-auto mt-8 inline-flex items-center justify-center rounded-full border-4 border-black bg-lime-400 px-8 py-4 text-lg font-black uppercase tracking-wide text-black shadow-[6px_6px_0_#ef4444] transition hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0_#ef4444]"
             >
               Save my spot
-            </button>
-          </form>
+            </a>
 
-          <p className="mt-5 text-sm font-semibold uppercase tracking-wide text-slate-400">
-            Placeholder form for now — send the Tally link and I&apos;ll wire this up
-            next.
-          </p>
+            <p className="mt-5 text-sm font-black uppercase tracking-wide text-slate-600">
+              You&apos;ll be taken to the official GCGC waitlist form on Tally.
+            </p>
+          </div>
         </div>
       </section>
     </main>
