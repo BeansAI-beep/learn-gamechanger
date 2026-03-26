@@ -13,28 +13,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Learn GameChanger | Simple training for sports parents and scorekeepers",
+  title: "GCGC | Grump City Game Changer",
   description:
-    "Beginner-friendly GameChanger training for sports parents, volunteer scorekeepers, and team admins. Learn setup, scoring, livestream basics, and game-day confidence.",
+    "Satirical branding, real help. Join Ashley's waitlist for a beginner-friendly mini course to help sports parents and scorekeepers learn GameChanger with less stress.",
   keywords: [
-    "Learn GameChanger",
+    "GCGC",
+    "Grump City Game Changer",
     "GameChanger training",
     "GameChanger course",
     "sports scorekeeping help",
     "GameChanger app help",
     "team parent training",
+    "Ashley GameChanger",
   ],
   openGraph: {
-    title: "Learn GameChanger",
+    title: "GCGC | Grump City Game Changer",
     description:
-      "Simple training for sports parents and scorekeepers.",
+      "Satirical branding, real help for sports parents and scorekeepers.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Learn GameChanger",
+    title: "GCGC | Grump City Game Changer",
     description:
-      "Simple training for sports parents and scorekeepers.",
+      "Satirical branding, real help for sports parents and scorekeepers.",
   },
   icons: {
     icon: "/favicon.ico",

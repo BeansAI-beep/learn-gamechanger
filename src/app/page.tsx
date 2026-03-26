@@ -94,13 +94,17 @@ export default function Home() {
             </div>
 
             <h1 className="mt-6 text-5xl font-black uppercase leading-none tracking-tight text-black md:text-7xl">
-              Grump City
+              <span className="block">Grump City</span>
               <span className="block text-red-600">Game Changer</span>
             </h1>
 
+            <p className="mt-4 text-lg font-black uppercase tracking-[0.15em] text-slate-800 md:text-xl">
+              GCGC
+            </p>
+
             <p className="mt-6 max-w-2xl text-xl font-bold leading-8 text-slate-900 md:text-2xl">
-              Satirical branding. Real help. Join the waitlist for Ashley&apos;s
-              upcoming mini course and learn GameChanger without the stress,
+              A satirical brand for a very real GameChanger mini course. Join
+              Ashley&apos;s waitlist and learn GameChanger without the stress,
               confusion, or fake confidence nods.
             </p>
 
