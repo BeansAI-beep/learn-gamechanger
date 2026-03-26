@@ -33,24 +33,6 @@ const fakeBonuses = [
   "BONUS: increased odds of looking like you know what you're doing*",
 ];
 
-const testimonials = [
-  {
-    quote:
-      "I went from random tapping to mild competence in what felt like record time.",
-    name: "Probably a Team Mom Somewhere",
-  },
-  {
-    quote:
-      "Before this, I was spiritually unprepared for scorekeeping.",
-    name: "Definitely Not a Nervous Parent",
-  },
-  {
-    quote:
-      "Five stars. Zero stars for the panic I used to feel before every game.",
-    name: "Person Who Just Wanted Someone To Explain It Normally",
-  },
-];
-
 const faqs = [
   {
     question: "What is GCGC?",
@@ -84,86 +66,72 @@ export default function Home() {
     <main className="min-h-screen bg-[#fff7cf] text-slate-900">
       <section className="border-b-4 border-black bg-[radial-gradient(circle_at_top,_#fff6a3_0%,_#ffd84d_40%,_#ff9f1c_100%)]">
         <div className="mx-auto max-w-7xl px-6 py-6 text-center md:px-10">
-          <div className="inline-block rounded-full border-4 border-black bg-red-500 px-5 py-2 text-sm font-black uppercase tracking-[0.2em] text-white shadow-[4px_4px_0_#000]">
+          <div className="inline-block rounded-full border-4 border-black bg-red-500 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-white shadow-[4px_4px_0_#000] md:px-5 md:text-sm md:tracking-[0.2em]">
             As seen on stressed-out sports parents everywhere
           </div>
         </div>
 
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 pb-20 pt-4 md:grid-cols-[1.1fr_0.9fr] md:px-10 md:pb-24 md:pt-6">
+        <div className="mx-auto grid max-w-7xl gap-8 px-6 pb-16 pt-2 md:grid-cols-[1.1fr_0.9fr] md:gap-10 md:px-10 md:pb-24 md:pt-6">
           <div>
-            <div className="inline-block -rotate-2 border-4 border-black bg-cyan-300 px-4 py-2 text-sm font-black uppercase tracking-[0.2em] text-black shadow-[6px_6px_0_#000]">
-              GCGC • Grump City Game Changer • because somebody had to teach this properly
+            <div className="inline-block -rotate-2 border-4 border-black bg-cyan-300 px-4 py-2 text-xs font-black uppercase tracking-[0.14em] text-black shadow-[6px_6px_0_#000] md:text-sm md:tracking-[0.2em]">
+              GCGC • Grump City Game Changer
             </div>
 
-            <h1 className="mt-6 text-5xl font-black uppercase leading-none tracking-tight text-black md:text-7xl">
+            <h1 className="mt-5 text-4xl font-black uppercase leading-none tracking-tight text-black md:mt-6 md:text-7xl">
               <span className="block">Grump City</span>
               <span className="block text-red-600">Game Changer</span>
             </h1>
 
-            <p className="mt-4 text-lg font-black uppercase tracking-[0.15em] text-slate-800 md:text-xl">
-              GCGC
+            <p className="mt-5 max-w-2xl text-lg font-bold leading-7 text-slate-900 md:text-2xl md:leading-8">
+              Ashley is putting together a beginner-friendly mini course to help
+              sports parents and scorekeepers learn GameChanger with less stress.
             </p>
 
-            <p className="mt-6 max-w-2xl text-xl font-bold leading-8 text-slate-900 md:text-2xl">
-              Join Ashley&apos;s waitlist for a beginner-friendly mini course and
-              learn GameChanger without the stress, confusion, or fake
-              confidence nods.
-            </p>
+            <div className="mt-6 inline-block rotate-1 border-4 border-black bg-white px-4 py-3 text-sm font-bold text-slate-900 shadow-[6px_6px_0_#000] md:px-5 md:text-base">
+              Join the waitlist to see if this idea has legs.
+            </div>
 
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-6 flex flex-col gap-4 sm:flex-row">
               <a
                 href="https://tally.so/r/0QLDx0"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-full border-4 border-black bg-lime-400 px-8 py-4 text-lg font-black uppercase tracking-wide text-black shadow-[6px_6px_0_#000] transition hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0_#000]"
               >
-                Join the waitlist
+                Save My Spot
               </a>
               <a
                 href="#how-it-helps"
                 className="inline-flex items-center justify-center rounded-full border-4 border-black bg-white px-8 py-4 text-lg font-black uppercase tracking-wide text-black shadow-[6px_6px_0_#000] transition hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0_#000]"
               >
-                Tell me more
+                Learn More
               </a>
             </div>
 
-            <div className="mt-8 inline-block rotate-1 border-4 border-black bg-white px-5 py-3 text-base font-bold text-slate-900 shadow-[6px_6px_0_#000]">
-              Hosted by <span className="text-red-600">Ashley</span>, a real
-              GameChanger power user who actually knows what she&apos;s doing.
-            </div>
-
-            <div className="mt-6 inline-block -rotate-1 border-4 border-black bg-pink-400 px-5 py-3 text-base font-black uppercase text-black shadow-[6px_6px_0_#000]">
-              BUT WAIT — we&apos;re starting with a waitlist first to see if this idea
-              has legs.
-            </div>
-
-            <div className="mt-6 flex flex-wrap gap-4">
-              <div className="rotate-[-4deg] border-4 border-black bg-yellow-300 px-4 py-3 text-sm font-black uppercase text-black shadow-[5px_5px_0_#000]">
+            <div className="mt-6 flex flex-wrap gap-3">
+              <div className="rotate-[-3deg] border-4 border-black bg-yellow-300 px-3 py-2 text-xs font-black uppercase text-black shadow-[5px_5px_0_#000] md:px-4 md:py-3 md:text-sm">
                 No tech degree required
               </div>
-              <div className="rotate-[3deg] border-4 border-black bg-lime-400 px-4 py-3 text-sm font-black uppercase text-black shadow-[5px_5px_0_#000]">
+              <div className="rotate-[2deg] border-4 border-black bg-lime-400 px-3 py-2 text-xs font-black uppercase text-black shadow-[5px_5px_0_#000] md:px-4 md:py-3 md:text-sm">
                 Mildly impressive competence
-              </div>
-              <div className="rotate-[-2deg] border-4 border-black bg-white px-4 py-3 text-sm font-black uppercase text-black shadow-[5px_5px_0_#000]">
-                Results may vary by panic level
               </div>
             </div>
 
-            <p className="mt-5 max-w-2xl text-sm font-semibold uppercase tracking-wide text-slate-700">
-              Grump City branding is a joke. The help is real. Independent
-              training. Not affiliated with or endorsed by GameChanger.
+            <p className="mt-5 max-w-2xl text-xs font-semibold uppercase tracking-wide text-slate-700 md:text-sm">
+              Independent training. Not affiliated with or endorsed by
+              GameChanger.
             </p>
           </div>
 
           <div className="flex items-center justify-center">
             <div className="relative w-full max-w-lg">
-              <div className="absolute -left-2 -top-6 z-20 rotate-[-8deg] border-4 border-black bg-yellow-300 px-4 py-2 text-sm font-black uppercase tracking-[0.15em] text-black shadow-[5px_5px_0_#000]">
+              <div className="absolute left-0 top-0 z-20 rotate-[-8deg] border-4 border-black bg-yellow-300 px-3 py-2 text-xs font-black uppercase tracking-[0.12em] text-black shadow-[5px_5px_0_#000] md:-left-2 md:-top-6 md:px-4 md:text-sm md:tracking-[0.15em]">
                 Website Guy
               </div>
-              <div className="absolute -right-3 top-10 z-20 rotate-[8deg] border-4 border-black bg-pink-400 px-4 py-2 text-sm font-black uppercase tracking-[0.15em] text-black shadow-[5px_5px_0_#000]">
-                *actual expert
+              <div className="absolute right-0 top-8 z-20 rotate-[8deg] border-4 border-black bg-pink-400 px-3 py-2 text-xs font-black uppercase tracking-[0.12em] text-black shadow-[5px_5px_0_#000] md:-right-3 md:top-10 md:px-4 md:text-sm md:tracking-[0.15em]">
+                Ashley
               </div>
-              <div className="relative z-10 mx-auto max-w-sm">
+              <div className="relative z-10 mx-auto max-w-[280px] md:max-w-sm">
                 <Image
                   src="/ashley/ashley-cutout.png"
                   alt="Ashley and website guy"
@@ -173,21 +141,21 @@ export default function Home() {
                   priority
                 />
               </div>
-              <div className="relative -mt-8 border-4 border-black bg-white p-6 shadow-[10px_10px_0_#000]">
-                <div className="border-4 border-black bg-red-600 px-4 py-2 text-center text-sm font-black uppercase tracking-[0.2em] text-white">
+              <div className="relative mt-2 border-4 border-black bg-white p-5 shadow-[10px_10px_0_#000] md:-mt-8 md:p-6">
+                <div className="border-4 border-black bg-red-600 px-4 py-2 text-center text-sm font-black uppercase tracking-[0.16em] text-white md:tracking-[0.2em]">
                   Tired of this routine?
                 </div>
-                <ul className="mt-6 space-y-4">
+                <ul className="mt-5 space-y-3 md:mt-6 md:space-y-4">
                   {painPoints.map((item) => (
                     <li
                       key={item}
-                      className="border-4 border-black bg-[#fff7cf] p-4 text-base font-bold leading-7 text-slate-900"
+                      className="border-4 border-black bg-[#fff7cf] p-3 text-sm font-bold leading-6 text-slate-900 md:p-4 md:text-base md:leading-7"
                     >
                       {item}
                     </li>
                   ))}
                 </ul>
-                <div className="mt-6 border-4 border-black bg-cyan-300 p-4 text-center text-lg font-black uppercase text-black">
+                <div className="mt-5 border-4 border-black bg-cyan-300 p-4 text-center text-base font-black uppercase text-black md:mt-6 md:text-lg">
                   Good news: Ashley can help.
                 </div>
               </div>
@@ -375,26 +343,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-b-4 border-black bg-[linear-gradient(135deg,_#ffef5a_0%,_#ff8fab_100%)]">
-        <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
-          <div className="mb-8 inline-block -rotate-1 border-4 border-black bg-white px-5 py-2 text-sm font-black uppercase tracking-[0.2em] text-black shadow-[5px_5px_0_#000]">
-            Testimonials that are mostly for the bit
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {testimonials.map((item) => (
-              <div key={item.name} className="border-4 border-black bg-white p-7 shadow-[8px_8px_0_#000]">
-                <p className="text-xl font-black leading-8 text-slate-900">
-                  “{item.quote}”
-                </p>
-                <p className="mt-5 text-sm font-black uppercase tracking-wide text-red-600">
-                  — {item.name}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="bg-[#fffdf4]">
         <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
           <div className="inline-block rotate-1 border-4 border-black bg-yellow-300 px-4 py-2 text-sm font-black uppercase tracking-[0.2em] text-black shadow-[5px_5px_0_#000]">
@@ -422,9 +370,9 @@ export default function Home() {
           <h2 className="mt-6 text-4xl font-black uppercase leading-tight md:text-6xl">
             Get on Ashley&apos;s waitlist.
           </h2>
-          <p className="mx-auto mt-6 max-w-3xl text-xl font-bold leading-8 text-slate-300">
-            Join the waitlist for beginner-friendly GameChanger training, help us
-            validate the idea, and help shape what goes into the mini course.
+          <p className="mx-auto mt-6 max-w-3xl text-lg font-bold leading-7 text-slate-300 md:text-xl md:leading-8">
+            Join the waitlist for beginner-friendly GameChanger training and be
+            first to hear when Ashley&apos;s mini course is ready.
           </p>
 
           <div className="mx-auto mt-10 max-w-3xl border-4 border-white bg-white p-8 text-slate-950 shadow-[10px_10px_0_#22c55e]">
