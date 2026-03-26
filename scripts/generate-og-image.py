@@ -21,7 +21,6 @@ colors = {
     'white': '#ffffff',
 }
 
-# Background
 for y in range(H):
     blend = y / H
     r1, g1, b1 = (255, 233, 92)
@@ -54,22 +53,19 @@ if font_path:
     title = ImageFont.truetype(font_path, 106)
     subtitle = ImageFont.truetype(font_path, 34)
     small = ImageFont.truetype(font_path, 24)
-    badge = ImageFont.truetype(font_path, 26)
+    badge = ImageFont.truetype(font_path, 23)
     burst_font = ImageFont.truetype(font_path, 26)
 else:
     title = subtitle = small = badge = burst_font = ImageFont.load_default()
 
-# top badge
 badge_box = [54, 44, 420, 96]
 d.rounded_rectangle(badge_box, radius=12, fill=colors['white'], outline=colors['black'], width=4)
-d.text((72, 58), 'AS SEEN ON GROUP TEXT', font=badge, fill=colors['black'])
+d.text((74, 61), 'AS SEEN ON GROUP TEXT', font=badge, fill=colors['black'])
 
-# main title
 main_x, main_y = 70, 140
 d.text((main_x + 7, main_y + 7), 'GCGC', font=title, fill=colors['black'])
 d.text((main_x, main_y), 'GCGC', font=title, fill=colors['white'])
 
-# subtitle ribbons
 box1 = [70, 275, 455, 327]
 box2 = [70, 343, 620, 395]
 d.rectangle(box1, fill=colors['blue'], outline=colors['black'], width=4)
@@ -77,14 +73,12 @@ d.rectangle(box2, fill=colors['red'], outline=colors['black'], width=4)
 d.text((88, 285), 'GRUMP CITY', font=subtitle, fill=colors['black'])
 d.text((88, 353), 'GAME CHANGER', font=subtitle, fill=colors['white'])
 
-# info box
 info = [70, 425, 645, 540]
 d.rectangle(info, fill=colors['white'], outline=colors['black'], width=4)
 d.text((92, 447), "Ashley's GameChanger", font=small, fill=colors['black'])
 d.text((92, 480), 'mini course waitlist', font=small, fill=colors['black'])
 d.text((92, 513), 'for sports parents & scorekeepers', font=small, fill=colors['black'])
 
-# Ashley face / cutout on right
 if face_path.exists():
     face = Image.open(face_path).convert('RGBA')
     bbox = face.getchannel('A').getbbox()
@@ -102,12 +96,10 @@ if face_path.exists():
     img.paste(shadow.convert('RGB'), (fx + 10, fy + 14), shadow)
     img.paste(face, (fx, fy), face)
 
-    # sticker by face
     sticker = [840, 118, 1135, 164]
     d.rounded_rectangle(sticker, radius=16, fill=colors['lime'], outline=colors['black'], width=4)
-    d.text((865, 130), 'ASHLEY KNOWS THE APP', font=badge, fill=colors['black'])
+    d.text((877, 133), 'ASHLEY KNOWS THE APP', font=badge, fill=colors['black'])
 
-# burst
 burst_center = (1015, 485)
 points = []
 for i in range(22):
@@ -118,10 +110,9 @@ d.polygon(points, fill=colors['pink'], outline=colors['black'])
 d.text((950, 458), 'WAITLIST', font=burst_font, fill=colors['black'])
 d.text((978, 492), 'OPEN', font=burst_font, fill=colors['black'])
 
-# extra ridiculous banner
 cta = [725, 48, 1128, 100]
 d.rounded_rectangle(cta, radius=14, fill=colors['yellow'], outline=colors['black'], width=4)
-d.text((748, 62), 'STOP THE GAME-DAY PANIC', font=badge, fill=colors['black'])
+d.text((765, 63), 'STOP THE GAME-DAY PANIC', font=badge, fill=colors['black'])
 
 img.save(out)
 print(out)
