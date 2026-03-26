@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const painPoints = [
   "VOLUNTOLD to keep score and now everyone assumes you're basically ESPN.",
   "The game is starting, the buttons are everywhere, and you're one tap away from total parent panic.",
@@ -154,22 +156,40 @@ export default function Home() {
           </div>
 
           <div className="flex items-center justify-center">
-            <div className="w-full max-w-md rotate-2 border-4 border-black bg-white p-6 shadow-[10px_10px_0_#000]">
-              <div className="border-4 border-black bg-red-600 px-4 py-2 text-center text-sm font-black uppercase tracking-[0.2em] text-white">
-                Tired of this routine?
+            <div className="relative w-full max-w-lg">
+              <div className="absolute -left-2 -top-6 z-20 rotate-[-8deg] border-4 border-black bg-yellow-300 px-4 py-2 text-sm font-black uppercase tracking-[0.15em] text-black shadow-[5px_5px_0_#000]">
+                Real Ashley*
               </div>
-              <ul className="mt-6 space-y-4">
-                {painPoints.map((item) => (
-                  <li
-                    key={item}
-                    className="border-4 border-black bg-[#fff7cf] p-4 text-base font-bold leading-7 text-slate-900"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-6 border-4 border-black bg-cyan-300 p-4 text-center text-lg font-black uppercase text-black">
-                Good news: Ashley can help.
+              <div className="absolute -right-3 top-10 z-20 rotate-[8deg] border-4 border-black bg-pink-400 px-4 py-2 text-sm font-black uppercase tracking-[0.15em] text-black shadow-[5px_5px_0_#000]">
+                *actual expert
+              </div>
+              <div className="relative z-10 mx-auto max-w-sm">
+                <Image
+                  src="/ashley/ashley-cutout.png"
+                  alt="Ashley"
+                  width={3024}
+                  height={2529}
+                  className="h-auto w-full object-contain drop-shadow-[0_18px_18px_rgba(0,0,0,0.45)]"
+                  priority
+                />
+              </div>
+              <div className="relative -mt-8 border-4 border-black bg-white p-6 shadow-[10px_10px_0_#000]">
+                <div className="border-4 border-black bg-red-600 px-4 py-2 text-center text-sm font-black uppercase tracking-[0.2em] text-white">
+                  Tired of this routine?
+                </div>
+                <ul className="mt-6 space-y-4">
+                  {painPoints.map((item) => (
+                    <li
+                      key={item}
+                      className="border-4 border-black bg-[#fff7cf] p-4 text-base font-bold leading-7 text-slate-900"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-6 border-4 border-black bg-cyan-300 p-4 text-center text-lg font-black uppercase text-black">
+                  Good news: Ashley can help.
+                </div>
               </div>
             </div>
           </div>
